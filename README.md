@@ -20,8 +20,8 @@ Este proyecto es una aplicación de ejemplo con **Next.js** y **TypeScript** que
 Clona este repositorio en tu máquina local:
 
 ```
-git clone https://github.com/tu-usuario/nextjs-rendering-demo.git
-cd nextjs-rendering-demo
+git clone https://github.com/AgustinAlfieri/nexjs-rendering-example.git
+cd nexjs-rendering-example
 ```
 
 Instala las dependencias:
