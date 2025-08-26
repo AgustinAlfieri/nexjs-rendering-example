@@ -53,7 +53,7 @@ npm run build
 Iniciar el servidor en modo producción:
 
 ```
-npm start
+npm run start
 ```
 
 Accede en tu navegador a http://localhost:3000.
