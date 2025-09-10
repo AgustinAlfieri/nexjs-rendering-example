@@ -1,4 +1,3 @@
-// Layout principal (envoltorio común)
 import "./globals.css";
 import Link from "next/link.js";
 
@@ -14,8 +13,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body>
-        <nav style={{ display: "flex", gap: "1rem", marginBottom: "1rem" }}>
+        <nav style={{ display: "flex", gap: "2rem", marginBottom: "1rem" }}>
           <Link href="/">Home</Link>
+          <Link href="/csr">CSR</Link>
           <Link href="/ssr">SSR</Link>
           <Link href="/ssg">SSG</Link>
           <Link href="/isr">ISR</Link>
