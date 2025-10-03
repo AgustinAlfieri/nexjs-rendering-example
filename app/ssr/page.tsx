@@ -1,7 +1,7 @@
 export default async function SSRPage() {
   // SSR: siempre se ejecuta en el servidor en cada request
   const res = await fetch("https://randomuser.me/api/", {
-    cache: "no-store", // fuerza SSR en cada request
+    cache: "no-store", // fuerza SSR en cada request al no guardar caché
   });
   const data = await res.json();
   const user = data.results[0];

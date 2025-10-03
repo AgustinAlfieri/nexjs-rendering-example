@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image.js";
-
-// SSR - Reloj 
+/*
+// SSR - Reloj -- Comentado porque la API estaba caída
 async function ServerTime() {
   const res = await fetch("https://timeapi.io/api/time/current/zone?timeZone=America%2FArgentina%2FBuenos_Aires", {
     cache: "no-store",
@@ -13,6 +13,22 @@ async function ServerTime() {
       <h2 className="font-bold text-lg text-blue-900 mb-2">Server Side Rendering (SSR)</h2>
       <p className="text-base text-gray-800 mb-1">La página se genera en el servidor en cada request, mostrando siempre datos actualizados.</p>
       <p className="text-base text-gray-900">Hora actual en Rosario: <b className="text-blue-700">{data.time}:{data.seconds}</b></p>
+    </div>
+  );
+} */
+
+// SSR - Dato curioso en inglés
+async function ServerFact() {
+  const res = await fetch("https://uselessfacts.jsph.pl/api/v2/facts/random", {
+    cache: "no-store",
+  });
+  const data = await res.json();
+
+  return (
+    <div className="p-4 border rounded bg-gray-50">
+      <h2 className="font-bold text-lg text-blue-900 mb-2">Dato Curioso (SSR)</h2>
+      <p className="text-base text-gray-800 mb-1">Dato curioso generado en el servidor en cada request:</p>
+      <p className="text-base text-blue-700">{data.text}</p>
     </div>
   );
 }
@@ -68,7 +84,7 @@ export default function CombinedPage() {
       <h1 className="text-5xl font-extrabold text-indigo-900 mb-6 drop-shadow-lg">Ejemplo Combinado de Rendering en Next.js</h1>
       <div className="bg-white shadow-xl rounded-xl p-8 flex flex-col md:flex-row items-start w-full max-w-4xl gap-8">
         <div className="bg-grey flex flex-col gap-6 flex-1">
-          <ServerTime />
+          <ServerFact />
           <StaticCategories />
         </div>
         <div className="bg-grey flex-1 flex flex-col gap-8">
